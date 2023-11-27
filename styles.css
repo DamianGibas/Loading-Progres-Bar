@@ -1,0 +1,29 @@
+body{
+    background: #000;
+    color: #fff;
+}
+.progressbar{
+    width: 450px;
+    height: 24px;
+    border-radius: 20px;
+    border: 3px solid #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+.progressbar::after{
+    content: '';
+    background: greenyellow;
+    width: 0;
+    height: 100%;
+    border-radius: 20px;
+    position: absolute;
+    animation: progress 2s linear forwards;
+}
+@keyframes progress {
+    100%{
+        width: 90%;
+    }
+}
